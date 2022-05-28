@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YURI RIBEIRO - STUDENT NUMBER: 2020347</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <style></style>
+  <body>
+    <main>
+      <div id="loader-holder">
+        <div class="loader-spinner"></div>
+        <div>
+          <center><small>Please wait...</small></center>
+        </div>
+      </div>
+      <h1 id="app-title">Electricity Bill</h1>
+      <div id="form-holder">
+        <div id="main-box">
+          <form action="" id="calculate-bill">
+            <div class="form-item">
+              <label for="units"><b>Number of Units</b></label>
+              <input
+                type="number"
+                step="any"
+                min="0"
+                name="units"
+                id="units"
+                placeholder="xxx"
+                class="input-item text-right"
+                required
+              />
+            </div>
+            <div class="form-item">
+              <label for="vat"><b>Enter VAT</b> <small>(%)</small></label>
+              <input
+                type="number"
+                step="any"
+                name="vat"
+                id="vat"
+                placeholder="x"
+                class="input-item text-right"
+                required
+              />
+            </div>
+            <div class="form-item">
+              <label for="period"><b>Billing Period</b></label>
+              <input
+                type="number"
+                step="any"
+                min="1"
+                name="period"
+                id="period"
+                placeholder="x"
+                class="input-item text-right"
+                required
+              />
+            </div>
+            <div class="form-item">
+              <button class="btn-block" id="calculate-btn" type="submit">
+                Calculate
+              </button>
+              <button class="btn-block" id="reset-btn" type="reset">
+                Reset
+              </button>
+            </div>
+          </form>
+          <table id="result">
+            <colgroup>
+              <col width="50%" />
+              <col width="50%" />
+            </colgroup>
+            <tbody>
+              <tr>
+                <td class=""><b>Net Amount:</b></td>
+                <td class="text-right" id="total-out-vat"></td>
+              </tr>
+              <tr>
+                <td class=""><b>Total Incl. vat</b></td>
+                <td class="text-right" id="total-plus-vat"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
